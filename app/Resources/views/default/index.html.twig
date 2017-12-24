@@ -3,7 +3,7 @@
 {% block body %}
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="#">Dashboard</a>
+            <a class="navbar-brand" href="#">Build Manager</a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
                     data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -12,112 +12,30 @@
 
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Servers <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Settings</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Help</a>
+                        <a class="nav-link" href="#">Clone</a>
                     </li>
                 </ul>
+                <form class="form-inline mt-2 mt-md-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="TASK-123" aria-label="Deploy">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Fast Deploy</button>
+                </form>
             </div>
         </nav>
     </header>
 
-    <div class="container-fluid">
-        <div class="row">
-            <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
-                <ul class="nav nav-pills flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">CI1 <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">CI2</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">CI3</a>
-                    </li>
-                </ul>
-            </nav>
+    <div class="container">
+        <div class="col-xs-12 col-sm-12">
+            <div class="jumbotron">
+                <h1>Welcome to Networker!</h1>
 
-            <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
-                <h1>Ci1</h1>
+                <p>...</p>
 
-                <div class="row">
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-body">
-                                <p>HDD usage</p>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
-                                         aria-valuemin="0" aria-valuemax="100">25%</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-body">
-                                <p>RAM usage</p>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50"
-                                         aria-valuemin="0" aria-valuemax="100">50%</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h3>Builds</h3>
-
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Status</th>
-                            <th>JIRA issue</th>
-                            <th>Assignee</th>
-                            <th>JIRA issue status</th>
-                            <th>Actions</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1291</td>
-                            <td>svo-41</td>
-                            <td>running</td>
-                            <td><a href="https://jira.atlassian.net/browse/TASK-41">TASK-41</a></td>
-                            <td>John Smith</td>
-                            <td>resolved</td>
-                            <td>
-                                <div class="btn-group-sm">
-                                    <button class="btn btn-sm btn-secondary dropdown-toggle" type="button"
-                                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                        Actions
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="#">Kill</a>
-                                        <a class="dropdown-item" href="#">Stash</a>
-                                        <a class="dropdown-item" href="#">Adopt HTTPS</a>
-                                        <a class="dropdown-item" href="#">Show details</a>
-                                        <a class="dropdown-item" href="#">Deploy a branch</a>
-                                        <a class="dropdown-item" href="#">Update URLs</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </main>
+                <p><a class="btn btn-primary btn-lg" href="/instance" role="button">Show Instances</a></p>
+            </div>
         </div>
     </div>
 {% endblock %}
